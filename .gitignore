@@ -1,40 +1,52 @@
-# Build directories
+# ==========================================
+# 1. .NET / MAUI / Core Build Artifacts
+# ==========================================
 [Bb]in/
 [Oo]bj/
-**/[Bb]in/
-**/[Oo]bj/
+artifacts/
+TestResults/
 
-# VS / Rider
-.vs/
-.vscode/
-.idea/
-*.suo
+# User-specific project settings
 *.user
 *.userosscache
 *.sln.docstates
+*.userprefs
+*.ide/
 
-# MAUI / .NET artifacts
+# Debugging symbols & diagnostic logs
 *.pdb
 *.mdb
 *.cache
 *.log
 *.tlog
 *.lastcodeanalysissucceeded
-TestResults/
-*.vsix
-*.nupkg
-*.snupkg
 
-# NuGet
-*.nupkg
-*.snupkg
+# ==========================================
+# 2. Package Management (NuGet)
+# ==========================================
 .nuget/
 packages/
 project.lock.json
 project.fragment.lock.json
-artifacts/
+*.nupkg
+*.snupkg
 
-# macOS
+# ==========================================
+# 3. IDEs & Editors (VS Code, Visual Studio, Rider)
+# ==========================================
+.vs/
+.idea/
+*.suo
+*.sln.iml
+
+# Only ignore VS Code workspace settings, NOT build/launch configurations
+.vscode/
+.vscode/*.log
+.vscode/.history/
+
+# ==========================================
+# 4. macOS Operating System
+# ==========================================
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -42,37 +54,27 @@ Icon?
 ._*
 .Spotlight-V100
 .Trashes
-ehmthumbs.db
-Thumbs.db
+*.icloud
 
-# Apple platform build outputs
-**/bin/
-**/obj/
+# ==========================================
+# 5. Apple/iOS Build Outputs (Keep Info.plist!)
+# ==========================================
 **/*.app
 **/*.ipa
 **/*.dSYM/
+**/*.dSYM.zip
 **/*.xcarchive/
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcodeproj/xcshareddata/**
-*.xcuserstate
-*.xcuserdata/
 *.maccatalyst/
 
-# iOS / Mac Catalyst / tvOS / watchOS
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
+# User-specific Xcode configuration
+*.xcuserstate
+*.xcuserdata/
 
-# Xamarin / MAUI
-*.userprefs
-*.ide/
-*.plist
-*.mobileprovision
+# CRITICAL FIX: DO NOT ignore source .plist configuration files
+!**/Info.plist
+!**/Entitlements.plist
+
+# CRITICAL FIX: Secure native keys, but keep provisioning profiles flexible
+# Only ignore local certificate files if you drop them in your directory
 *.p12
-
-# JetBrains Rider
-.idea/
-*.sln.iml
+*.mobileprovision
