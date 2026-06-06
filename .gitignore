@@ -1,0 +1,78 @@
+# Build directories
+[Bb]in/
+[Oo]bj/
+**/[Bb]in/
+**/[Oo]bj/
+
+# VS / Rider
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# MAUI / .NET artifacts
+*.pdb
+*.mdb
+*.cache
+*.log
+*.tlog
+*.lastcodeanalysissucceeded
+TestResults/
+*.vsix
+*.nupkg
+*.snupkg
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehmthumbs.db
+Thumbs.db
+
+# Apple platform build outputs
+**/bin/
+**/obj/
+**/*.app
+**/*.ipa
+**/*.dSYM/
+**/*.xcarchive/
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/xcshareddata/**
+*.xcuserstate
+*.xcuserdata/
+*.maccatalyst/
+
+# iOS / Mac Catalyst / tvOS / watchOS
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xamarin / MAUI
+*.userprefs
+*.ide/
+*.plist
+*.mobileprovision
+*.p12
+
+# JetBrains Rider
+.idea/
+*.sln.iml
